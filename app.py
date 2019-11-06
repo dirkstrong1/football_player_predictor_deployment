@@ -23,14 +23,26 @@ def get_results():
         'standing_tackle', 'sliding_tackle',
         'jumping', 'stamina', 'strength', 'aggression')
 
-    for feature in expected_features:
-        print(data[feature])
+    predicted_dict = {0 : 'Strong Defensive Minded Player',
+                   1 : 'Technically Gifted Finisher',
+                   2 : 'All Around Playmaker',
+                   3 : 'Defensive Ball Winner',
+                   4 : 'Skilled Aerial Player'}
+
+    results_html_dict = {0 : "strong_def_minded.html",
+                   1 : "tech_gifted.html",
+                   2 : "all_rounder.html",
+                   3 : "def_ball_winner.html",
+                   4 : "skilled_air.html"}
+
+
 
     if data and all(feature in data for feature in expected_features):
         # Convert the dict of fields into a list
         test_value = [float(data[feature]) for feature in expected_features]
         predicted_class = predict_player(test_value)
-        return render_template("results.html", predicted_class=predicted_class)
+        return render_template(results_html_dict[predicted_class],
+               predicted_class=predicted_dict[predicted_class])
     else:
         return abort(400)
 

@@ -1,75 +1,97 @@
 <html>
   <head>
-    <title>First Flask App</title>
+    <title>Football Player Predictor</title>
     <link rel="stylesheet" media="screen" href="/static/bootstrap.min.css">
   </head>
   <body>
     <div class="jumbotron">
       <div class="container">
-        <h1 class="display-3">Football Player Predictor</h1>
-        <p>
-          Some cool content will go here
-        </p>
-        <p>
-          <form action="/get_results" method="post">
-            <p>Acceleration</p>
-            <input type="text" name="acceleration" value="60">
-            <p>Sprint Speed</p>
-            <input type="text" name="sprint_speed" value="60">
-            <p>Agility</p>
-            <input type="text" name="agility" value="60">
-            <p>Balance</p>
-            <input type="text" name="balance" value="60">
-            <p>Reactions</p>
-            <input type="text" name="reactions" value="60">
-            <p>Ball Control</p>
-            <input type="text" name="ball_control" value="60">
-            <p>Composure</p>
-            <input type="text" name="composure" value="60">
-            <p>Positioning</p>
-            <input type="text" name="positioning" value="60">
-            <p>Finishing</p>
-            <input type="text" name="finishing" value="60">
-            <p>Shot Power</p>
-            <input type="text" name="shot_power" value="60">
-            <p>Long Shots</p>
-            <input type="text" name="long_shots" value="60">
-            <p>Volleys</p>
-            <input type="text" name="volleys" value="60">
-            <p>Penalties</p>
-            <input type="text" name="penalties" value="60">
-            <p>Vision</p>
-            <input type="text" name="vision" value="60">
-            <p>Crossing</p>
-            <input type="text" name="crossing" value="60">
-            <p>Free Kicks</p>
-            <input type="text" name="free_kick" value="60">
-            <p>Short Passing</p>
-            <input type="text" name="short_pass" value="60">
-            <p>Long Passing</p>
-            <input type="text" name="long_pass" value="60">
-            <p>Curve</p>
-            <input type="text" name="pass_curve" value="60">
-            <p>Interceptions</p>
-            <input type="text" name="interceptions" value="60">
-            <p>Heading</p>
-            <input type="text" name="heading" value="60">
-            <p>Marking</p>
-            <input type="text" name="marking" value="60">
-            <p>Standing Tackle</p>
-            <input type="text" name="standing_tackle" value="60">
-            <p>Sliding Tackle</p>
-            <input type="text" name="sliding_tackle" value="60">
-            <p>Jumping</p>
-            <input type="text" name="jumping" value="60">
-            <p>Stamina</p>
-            <input type="text" name="stamina" value="60">
-            <p>Strength</p>
-            <input type="text" name="strength" value="60">
-            <p>Aggression</p>
-            <input type="text" name="aggression" value="60">
-            <br>
-            <input type="submit" class="btn btn-primary btn-lg" value="Predict!">
+          <div class="row">
+            <div class="col">
+              <h1 class="display-3">Football Player Predictor</h1>
+            </div>
+            
+              <p>
+                Some cool content will go here
+              </p>
+              <p>
+                <form action="/get_results" method="post">
+                  <div class="row">
+                      <div class="col">
+                        <p>Acceleration</p>
+                        <input type="text" name="acceleration" value="60">
+                        <p>Sprint Speed</p>
+                        <input type="text" name="sprint_speed" value="60">
+                        <p>Agility</p>
+                        <input type="text" name="agility" value="60">
+                        <p>Balance</p>
+                        <input type="text" name="balance" value="60">
+                        <p>Reactions</p>
+                        <input type="text" name="reactions" value="60">
+                        <p>Ball Control</p>
+                        <input type="text" name="ball_control" value="60">
+                        <p>Composure</p>
+                        <input type="text" name="composure" value="60">
+                      </div>
+                      <div class="col">
+                        <p>Positioning</p>
+                        <input type="text" name="positioning" value="60">
+                        <p>Finishing</p>
+                        <input type="text" name="finishing" value="60">
+                        <p>Shot Power</p>
+                        <input type="text" name="shot_power" value="60">
+                        <p>Long Shots</p>
+                        <input type="text" name="long_shots" value="60">
+                        <p>Volleys</p>
+                        <input type="text" name="volleys" value="60">
+                        <p>Penalties</p>
+                        <input type="text" name="penalties" value="60">
+                        <p>Vision</p>
+                        <input type="text" name="vision" value="60">
+                      </div>
+                      <div class="col">
+                        <p>Crossing</p>
+                        <input type="text" name="crossing" value="60">
+                        <p>Free Kicks</p>
+                        <input type="text" name="free_kick" value="60">
+                        <p>Short Passing</p>
+                        <input type="text" name="short_pass" value="60">
+                        <p>Long Passing</p>
+                        <input type="text" name="long_pass" value="60">
+                        <p>Curve</p>
+                        <input type="text" name="pass_curve" value="60">
+                        <p>Interceptions</p>
+                        <input type="text" name="interceptions" value="60">
+                        <p>Heading</p>
+                        <input type="text" name="heading" value="60">
+                      </div>
+                      <div class="col">
+                        <p>Marking</p>
+                        <input type="text" name="marking" value="60">
+                        <p>Standing Tackle</p>
+                        <input type="text" name="standing_tackle" value="60">
+                        <p>Sliding Tackle</p>
+                        <input type="text" name="sliding_tackle" value="60">
+                        <p>Jumping</p>
+                        <input type="text" name="jumping" value="60">
+                        <p>Stamina</p>
+                        <input type="text" name="stamina" value="60">
+                        <p>Strength</p>
+                        <input type="text" name="strength" value="60">
+                        <p>Aggression</p>
+                        <input type="text" name="aggression" value="60">
+                      </div>
+                  <br>
+                  </div>
+                  <br>
+                  <div class="container">
+                      <div class="row justify-content-md-center">
+                        <div class="col col-lg-2">
+                          <input type="submit"
+                          class="btn btn-primary btn-lg"value="Find your Class">
+                        </div>
+                      </div>
+                    </div>
           </form>
         </p>
       </div>
