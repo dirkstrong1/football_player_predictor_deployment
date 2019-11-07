@@ -1,87 +1,107 @@
 <html>
   <head>
     <title>Football Player Predictor</title>
-    <link rel="stylesheet" media="screen" href="/static/bootstrap.min.css">
-    
+    <link rel="stylesheet" media="screen" href="/static/bootstrap.min.css"> 
   </head>
-  <body style="background-color:#145A32">
-    <div class="jumbotron">
-      <div class="container" style="background-color:#323d36"
-      background-image:"url("https://www.transparenttextures.com/patterns/brushed-alum.png")">
+  <body style="background-color:darkslategrey">
+    <div class="jumbotron" style="background-color: #56977B">
+      <div class="container" style="background-color:#56977B">
           <div class="row">
             <div class="col">
-              <h1 class="display-3">Football Player Predictor</h1>
+              <h1 class="display-3" style="color:#6D5558">Football Player Predictor</h1>
             </div>
-            
-              <p>
-                Some cool content will go here
-              </p>
+              
+            <p>
+                INSERT VISUAL & BIO HERE
+              
+            </p>
               <p>
                 <form action="/get_results" method="post">
                   <div class="row">
                       <div class="col">
                         <p>Acceleration</p>
-                        <input type="text" name="acceleration" value="60">
+                        <input type="text"   name="acceleration" value="91"
+                        min="10" max="99">
                         <p>Sprint Speed</p>
-                        <input type="text" name="sprint_speed" value="60">
+                        <input type="text" name="sprint_speed" value="86"
+                        min="10" max="99">
                         <p>Agility</p>
-                        <input type="text" name="agility" value="60">
+                        <input type="text" name="agility" value="91"
+                        min="10" max="99">
                         <p>Balance</p>
-                        <input type="text" name="balance" value="60">
+                        <input type="text" name="balance" value="95"
+                        min="10" max="99">
                         <p>Reactions</p>
-                        <input type="text" name="reactions" value="60">
+                        <input type="text" name="reactions" value="95"
+                        min="10" max="99">
                         <p>Ball Control</p>
-                        <input type="text" name="ball_control" value="60">
+                        <input type="text" name="ball_control" value="96"
+                        min="10" max="99">
                         <p>Composure</p>
-                        <input type="text" name="composure" value="60">
+                        <input type="text" name="composure" value="96"
+                        min="10" max="99">
                       </div>
                       <div class="col">
                         <p>Positioning</p>
-                        <input type="text" name="positioning" value="60">
+                        <input type="text" name="positioning" value="94"
+                        min="10" max="99">
                         <p>Finishing</p>
-                        <input type="text" name="finishing" value="60">
+                        <input type="text" name="finishing" value="95"
+                        min="10" max="99">
                         <p>Shot Power</p>
-                        <input type="text" name="shot_power" value="60">
+                        <input type="text" name="shot_power" value="85"
+                        min="10" max="99">
                         <p>Long Shots</p>
-                        <input type="text" name="long_shots" value="60">
+                        <input type="text" name="long_shots" value="94"
+                        min="10" max="99">
                         <p>Volleys</p>
-                        <input type="text" name="volleys" value="60">
+                        <input type="text" name="volleys" value="86"
+                        min="10" max="99">
                         <p>Penalties</p>
-                        <input type="text" name="penalties" value="60">
+                        <input type="text" name="penalties" value="75"
+                        min="10" max="99">
                         <p>Vision</p>
-                        <input type="text" name="vision" value="60">
+                        <input type="text" name="vision" value="94"
+                        min="10" max="99">
                       </div>
                       <div class="col">
                         <p>Crossing</p>
-                        <input type="text" name="crossing" value="60">
+                        <input type="text" name="crossing" value="77"
+                        min="10" max="99">
                         <p>Free Kicks</p>
-                        <input type="text" name="free_kick" value="60">
+                        <input type="text" name="free_kick" value="94"
+                        min="10" max="99">
                         <p>Short Passing</p>
-                        <input type="text" name="short_pass" value="60">
+                        <input type="text" name="short_pass" value="90"
+                        min="10" max="99">
                         <p>Long Passing</p>
-                        <input type="text" name="long_pass" value="60">
+                        <input type="text" name="long_pass" value="87"
+                        min="10" max="99">
                         <p>Curve</p>
-                        <input type="text" name="pass_curve" value="60">
+                        <input type="text" name="pass_curve" value="93"
+                        min="10" max="99">
                         <p>Interceptions</p>
-                        <input type="text" name="interceptions" value="60">
+                        <input type="text" name="interceptions" value="22"
+                        min="10" max="99">
                         <p>Heading</p>
-                        <input type="text" name="heading" value="60">
+                        <input type="text" name="heading" value="70"
+                        min="10" max="99">
                       </div>
                       <div class="col">
                         <p>Marking</p>
-                        <input type="text" name="marking" value="60">
+                        <input type="text" name="marking" value="33">
                         <p>Standing Tackle</p>
-                        <input type="text" name="standing_tackle" value="60">
+                        <input type="text" name="standing_tackle" value="28">
                         <p>Sliding Tackle</p>
-                        <input type="text" name="sliding_tackle" value="60">
+                        <input type="text" name="sliding_tackle" value="26">
                         <p>Jumping</p>
-                        <input type="text" name="jumping" value="60">
+                        <input type="text" name="jumping" value="68">
                         <p>Stamina</p>
-                        <input type="text" name="stamina" value="60">
+                        <input type="text" name="stamina" value="72">
                         <p>Strength</p>
-                        <input type="text" name="strength" value="60">
+                        <input type="text" name="strength" value="59">
                         <p>Aggression</p>
-                        <input type="text" name="aggression" value="60">
+                        <input type="text" name="aggression" value="48">
                       </div>
                   <br>
                   </div>

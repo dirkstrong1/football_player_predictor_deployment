@@ -5,38 +5,47 @@
     <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 </head>
 <body>
-    <h1>We predict that this player is from class:<br>
-        {{ predicted_class }}</h1>
-    <br>
+    <div class="jumbotron" style="background-color: #323d36">
+        <div class="container" style="background-color:#323d36">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-5" style="color:lightslategray; text-align: center;">
+                    We predict that this player is from class:
+                    <br>
+                        <h1 style="color: lightslategray; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;;">
+                            {{ predicted_class }}
+                        </h1>
+                    </h1>
+                    <br>
     <div class="container" style="background-color:#323d36">
         <div class="row">
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card" style="width: 18rem; height: 24rem; background-color: lightslategray;">
+                    <img class="card-img-top" src="static/giorgio_chiellini.jpg" alt="Giorgio Chiellini">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Giorgio Chiellini</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Highlights</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card" style="width: 18rem; height: 24rem; background-color: lightslategray">
+                    <img class="card-img-top" src="static/john_stones.jpg" alt="John Stones">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">John Stones</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Highlights</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card" style="width: 18rem; height: 24rem; background-color: lightslategray">
+                <img class="card-img-top" src="static/harry_maguire.jpg" alt="Harry Maguire">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Harry Maguire</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Highlights</a>
                     </div>
                 </div>
             </div>

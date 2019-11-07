@@ -5,33 +5,52 @@
     <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 </head>
 <body>
-    We predict that this player is from class {{ predicted_class }}
-    <br>
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="jumbotron" style="background-color: #323d36">
+        <div class="container" style="background-color:#323d36">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-5" style="color:lightslategray; text-align: center;">
+                    We predict that this player is from class:
+                    <br>
+                        <h1 style="color: lightslategray; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;;">
+                            {{ predicted_class }}
+                        </h1>
+                    </h1>
+                    <br>
+    <div class="container" style="background-color:#323d36">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem; height: 24rem; background-color: lightslategray;">
+                    <img class="card-img-top" src="static/virgil_van-dijk.jpg" alt="Virgil van Dijk">
+                    <div class="card-body">
+                        <h5 class="card-title">Virgil van Dijk</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Highlights</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem; height: 24rem; background-color: lightslategray">
+                    <img class="card-img-top" src="static/kevin_de_bruyne.jpg" alt="Kevin de Bruyne">
+                    <div class="card-body">
+                        <h5 class="card-title">Kevin de Bruyne</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Highlights</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem; height: 24rem; background-color: lightslategray">
+                <img class="card-img-top" src="static/gareth_bale.jpg" alt="Gareth Bale">
+                    <div class="card-body">
+                        <h5 class="card-title">Gareth Bale</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Highlights</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <img src="{{ url_for('static', filename='upward_sloping_chart.png') }}" alt="">
 
     <a href="/">Predict Another Player</a>
 </body>
