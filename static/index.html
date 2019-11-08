@@ -6,17 +6,13 @@
   <body style="background-color:darkslategrey">
     <div class="jumbotron" style="background-color: #323d36">
       <div class="container" style="background-color:#323d36">
-          <div class="row">
-            <div class="col">
-              <h1 class="display-3" style="color:lightslategray">Football Player Predictor</h1>
-            </div>
-              
-            <p>
-                INSERT VISUAL & BIO HERE
-              
-            </p>
-              <p>
-                <form action="/get_results" method="post">
+        <div class="col">
+          <h1 class="display-3" style="color:lightslategray; text-align:center;"
+          >Football Player Predictor</h1>
+        </div>
+          <div class="row" style="text-align:center;">
+            <div class="col" style="align-self: center;">
+                <form action="/get_results" method="post" style="color: lightslategray;">
                   <div class="row">
                       <div class="col">
                         <p>Acceleration</p>
@@ -87,7 +83,7 @@
                         <input type="text" name="heading" value="70"
                         min="10" max="99">
                       </div>
-                      <div class="col">
+                      <div class="col"">
                         <p>Marking</p>
                         <input type="text" name="marking" value="33">
                         <p>Standing Tackle</p>
@@ -110,10 +106,14 @@
                       <div class="row justify-content-md-center">
                         <div class="col col-lg-2">
                           <input type="submit"
-                          class="btn btn-primary btn-lg"value="Find your Class">
+                          class="btn btn-primary btn-lg"
+                          value="Find your Class"
+                          style="background-color:lightslategray;
+                          color:#323d36;"">
                         </div>
                       </div>
                     </div>
+                  </div>
           </form>
         </p>
       </div>
