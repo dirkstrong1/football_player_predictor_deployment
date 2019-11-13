@@ -31,7 +31,7 @@ def get_results():
 
     results_html_dict = {0 : "strong_def_minded.html",
                    1 : "tech_gifted.html",
-                   2 : "all_rounder.html",
+                   2 : "all_arounder.html",
                    3 : "def_ball_winner.html",
                    4 : "skilled_air.html"}
 

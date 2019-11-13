@@ -1,122 +1,280 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Football Player Predictor</title>
-    <link rel="stylesheet" media="screen" href="/static/bootstrap.min.css"> 
-  </head>
-  <body style="background-color:darkslategrey">
-    <div class="jumbotron" style="background-color: #323d36">
-      <div class="container" style="background-color:#323d36">
-        <div class="col">
-          <h1 class="display-3" style="color:lightslategray; text-align:center;"
-          >Football Player Predictor</h1>
-        </div>
-          <div class="row" style="text-align:center;">
-            <div class="col" style="align-self: center;">
-                <form action="/get_results" method="post" style="color: lightslategray;">
-                  <div class="row">
-                      <div class="col">
-                        <p>Acceleration</p>
-                        <input type="text"   name="acceleration" value="91"
-                        min="10" max="99">
-                        <p>Sprint Speed</p>
-                        <input type="text" name="sprint_speed" value="86"
-                        min="10" max="99">
-                        <p>Agility</p>
-                        <input type="text" name="agility" value="91"
-                        min="10" max="99">
-                        <p>Balance</p>
-                        <input type="text" name="balance" value="95"
-                        min="10" max="99">
-                        <p>Reactions</p>
-                        <input type="text" name="reactions" value="95"
-                        min="10" max="99">
-                        <p>Ball Control</p>
-                        <input type="text" name="ball_control" value="96"
-                        min="10" max="99">
-                        <p>Composure</p>
-                        <input type="text" name="composure" value="96"
-                        min="10" max="99">
-                      </div>
-                      <div class="col">
-                        <p>Positioning</p>
-                        <input type="text" name="positioning" value="94"
-                        min="10" max="99">
-                        <p>Finishing</p>
-                        <input type="text" name="finishing" value="95"
-                        min="10" max="99">
-                        <p>Shot Power</p>
-                        <input type="text" name="shot_power" value="85"
-                        min="10" max="99">
-                        <p>Long Shots</p>
-                        <input type="text" name="long_shots" value="94"
-                        min="10" max="99">
-                        <p>Volleys</p>
-                        <input type="text" name="volleys" value="86"
-                        min="10" max="99">
-                        <p>Penalties</p>
-                        <input type="text" name="penalties" value="75"
-                        min="10" max="99">
-                        <p>Vision</p>
-                        <input type="text" name="vision" value="94"
-                        min="10" max="99">
-                      </div>
-                      <div class="col">
-                        <p>Crossing</p>
-                        <input type="text" name="crossing" value="77"
-                        min="10" max="99">
-                        <p>Free Kicks</p>
-                        <input type="text" name="free_kick" value="94"
-                        min="10" max="99">
-                        <p>Short Passing</p>
-                        <input type="text" name="short_pass" value="90"
-                        min="10" max="99">
-                        <p>Long Passing</p>
-                        <input type="text" name="long_pass" value="87"
-                        min="10" max="99">
-                        <p>Curve</p>
-                        <input type="text" name="pass_curve" value="93"
-                        min="10" max="99">
-                        <p>Interceptions</p>
-                        <input type="text" name="interceptions" value="22"
-                        min="10" max="99">
-                        <p>Heading</p>
-                        <input type="text" name="heading" value="70"
-                        min="10" max="99">
-                      </div>
-                      <div class="col"">
-                        <p>Marking</p>
-                        <input type="text" name="marking" value="33">
-                        <p>Standing Tackle</p>
-                        <input type="text" name="standing_tackle" value="28">
-                        <p>Sliding Tackle</p>
-                        <input type="text" name="sliding_tackle" value="26">
-                        <p>Jumping</p>
-                        <input type="text" name="jumping" value="68">
-                        <p>Stamina</p>
-                        <input type="text" name="stamina" value="72">
-                        <p>Strength</p>
-                        <input type="text" name="strength" value="59">
-                        <p>Aggression</p>
-                        <input type="text" name="aggression" value="48">
-                      </div>
-                  <br>
-                  </div>
-                  <br>
-                  <div class="container">
-                      <div class="row justify-content-md-center">
-                        <div class="col col-lg-2">
-                          <input type="submit"
-                          class="btn btn-primary btn-lg"
-                          value="Find your Class"
-                          style="background-color:lightslategray;
-                          color:#323d36;"">
-                        </div>
+<title>In(Formation)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="/static/soccer_logo.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p>ABOUT</p>
+  </a>
+  <a href="#predictor" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-map-marker w3-xxlarge"></i>
+    <p>PREDICTOR</p>
+  </a>
+  <a href="#download" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-download w3-xxlarge"></i>
+      <p>DOWNLOAD</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#predictor" class="w3-bar-item w3-button" style="width:25% !important">PREDICTOR</a>
+    <a href="#download" class="w3-bar-item w3-button" style="width:25% !important">DOWNLOAD</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">In(Formation)</h1>
+    <p>Football Player Predictor</p>
+    <img src="/static/soccer_logo.png" alt="boy" class="w3-image" width="600" height="670">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Project</h2>
+    <hr style="width:200px" class="w3-opacity">
+    
+    <p>“Good soccer players need not be titans sculpted by Michelangelo.<br>
+       In soccer, ability is much more important than shape, and in many cases,<br>
+      skill is the art of turning limitations into virtues.”
+      <br>
+      <br>  
+      -Eduardo Galeano
+      
+    </p>
+
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+        <h2 class="w3-text-light-grey">Mission</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <p>The mission of this project is to empower both coaches and players
+          to develop their play but understanding archetypes of playing styles and skills
+          of players. Taking a skill first approach will help coaches formulate better teams 
+          and engage players on how to model their game and work on both strenghts and 
+          less develop skills. Providing a full scale solution from data collection,
+          modeling, visuals, and drills based on the findings we can help push
+          American football into a new era of football analytics to compete on the world stage.
+        </p>
+    
+      <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="predictor">
+        <h2 class="w3-text-light-grey">Predictor</h2>
+        <hr style="width:200px" class="w3-opacity">
+
+      <div class="w3-row" style="text-align:center;">
+          <div class="w3-col" style="align-self: center;">
+              <form action="/get_results" method="post" style="color: lightslategray;">
+                <div class="w3-container">
+                <div class="w3-cell-row">
+                    <div class="w3-container w3-cell">
+                      <p>Acceleration</p>
+                      <input type="text"   name="acceleration" value="91"
+                      min="10" max="99">
+                      <p>Sprint Speed</p>
+                      <input type="text" name="sprint_speed" value="86"
+                      min="10" max="99">
+                      <p>Agility</p>
+                      <input type="text" name="agility" value="91"
+                      min="10" max="99">
+                      <p>Balance</p>
+                      <input type="text" name="balance" value="95"
+                      min="10" max="99">
+                      <p>Reactions</p>
+                      <input type="text" name="reactions" value="95"
+                      min="10" max="99">
+                      <p>Ball Control</p>
+                      <input type="text" name="ball_control" value="96"
+                      min="10" max="99">
+                      <p>Composure</p>
+                      <input type="text" name="composure" value="96"
+                      min="10" max="99">
+                    </div>
+                    <div class="w3-container w3-cell">
+                      <p>Positioning</p>
+                      <input type="text" name="positioning" value="94"
+                      min="10" max="99">
+                      <p>Finishing</p>
+                      <input type="text" name="finishing" value="95"
+                      min="10" max="99">
+                      <p>Shot Power</p>
+                      <input type="text" name="shot_power" value="85"
+                      min="10" max="99">
+                      <p>Long Shots</p>
+                      <input type="text" name="long_shots" value="94"
+                      min="10" max="99">
+                      <p>Volleys</p>
+                      <input type="text" name="volleys" value="86"
+                      min="10" max="99">
+                      <p>Penalties</p>
+                      <input type="text" name="penalties" value="75"
+                      min="10" max="99">
+                      <p>Vision</p>
+                      <input type="text" name="vision" value="94"
+                      min="10" max="99">
+                    </div>
+                    <div class="w3-container w3-cell">
+                      <p>Crossing</p>
+                      <input type="text" name="crossing" value="77"
+                      min="10" max="99">
+                      <p>Free Kicks</p>
+                      <input type="text" name="free_kick" value="94"
+                      min="10" max="99">
+                      <p>Short Passing</p>
+                      <input type="text" name="short_pass" value="90"
+                      min="10" max="99">
+                      <p>Long Passing</p>
+                      <input type="text" name="long_pass" value="87"
+                      min="10" max="99">
+                      <p>Curve</p>
+                      <input type="text" name="pass_curve" value="93"
+                      min="10" max="99">
+                      <p>Interceptions</p>
+                      <input type="text" name="interceptions" value="22"
+                      min="10" max="99">
+                      <p>Heading</p>
+                      <input type="text" name="heading" value="70"
+                      min="10" max="99">
+                    </div>
+                    <div class="w3-container w3-cell">
+                      <p>Marking</p>
+                      <input type="text" name="marking" value="33">
+                      <p>Standing Tackle</p>
+                      <input type="text" name="standing_tackle" value="28">
+                      <p>Sliding Tackle</p>
+                      <input type="text" name="sliding_tackle" value="26">
+                      <p>Jumping</p>
+                      <input type="text" name="jumping" value="68">
+                      <p>Stamina</p>
+                      <input type="text" name="stamina" value="72">
+                      <p>Strength</p>
+                      <input type="text" name="strength" value="59">
+                      <p>Aggression</p>
+                      <input type="text" name="aggression" value="48">
+                    </div>
+                <br>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                      <div class="col col-lg-2">
+                        <input type="submit"
+                        class="btn btn-primary btn-lg"
+                        value="Find your Class"
+                        style="background-color:lightslategray;
+                        color:#323d36;">
                       </div>
                     </div>
                   </div>
-          </form>
-        </p>
+                </div>
+        </form>
+      </p>
+    </div>
+  </div>
+  <br>
+    
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">15000+</span><br>
+        Players
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">31</span><br>
+        Leagues
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">720</span><br>
+        Teams
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">5</span><br>
+        Distinct Classes
       </div>
     </div>
-  </body>
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="download">
+        <h2 class="w3-text-light-grey">GET COMBINE PDF</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <p>Use this sheet with the associated drills (including setup instructions) to test 
+          and record the abilities of players to be upload through the site.
+          </p>
+          <button class="w3-button w3-light-grey w3-padding-large w3-section">
+          <i class="fa fa-download"></i> GET COMBINE PDF
+          </button>
+    
+    <br>
+    <br>
+
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
+    <img src="static/gk_dive.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">DIRECTOR OF GOALKEEPING</p>
+    <p>St. Vrain FC - Longmont, CO</p><br>
+    
+    <img src="static/soccer_ball.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">DATA SCIENTIST</p>
+    <p>Sports coaching and management</p>
+  <!-- End About Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Seattle -- US</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: (970)376-3522</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: dirkvancuran@gmail.com</p>
+    </div><br>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
 </html>

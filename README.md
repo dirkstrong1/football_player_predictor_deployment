@@ -1,4 +1,27 @@
-# Capstone Flask App Template
+# Football Player Predictor
+
+This project fully deploys a web application using a machine learning algorithm to
+predict a football player class. The landing pages then provide further information on the
+players and insights into play styles.
+
+* Python (3.7.4)
+
+### System
+
+This project was created on a Macbook Pro running MacOS Mojave.
+
+#### Python
+
+This project used Python 3.7.4 and Anaconda 4.7.12. All Python packages can be found in the [`environment.yml`] file.
+
+
+## Acknowledgements
+
+### Data
+
+Thank you to [Aishwarya Sharma](https://www.kaggle.com/aishwarya1992) for publishing his [FIFA 19 Player Database on Kaggle](https://www.kaggle.com/aishwarya1992/fifa-19-player-database/):
+
+> [This] Data set consists of all the player data from EA Sports FIFA 19. It contains all the attributes and ratings for all players in the data set.
 
 ## Requirements
 
