@@ -15,6 +15,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
 </style>
 <body class="w3-black">
 
@@ -82,12 +83,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <h2 class="w3-text-light-grey">Mission</h2>
         <hr style="width:200px" class="w3-opacity">
         <p>The mission of this project is to empower both coaches and players
-          to develop their play but understanding archetypes of playing styles and skills
-          of players. Taking a skill first approach will help coaches formulate better teams 
-          and engage players on how to model their game and work on both strenghts and 
-          less develop skills. Providing a full scale solution from data collection,
-          modeling, visuals, and drills based on the findings we can help push
-          American football into a new era of football analytics to compete on the world stage.
+          to develop better team play by understanding archetypes of playing 
+          styles and skills rather than a physical attribute approach to positional play.
+          Taking a skill first approach will 
+          help coaches formulate better teams and engage players on how to 
+          model their game and work on both strenghts and less develop
+          skills. Providing a full scale solution from data collection,
+          modeling, visuals, and drills based on the findings we can help 
+          push American football into a new era of football analytics to 
+          compete on the world stage.
         </p>
     
       <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="predictor">
@@ -99,10 +103,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
               <form action="/get_results" method="post" style="color: lightslategray;">
                 <div class="w3-container">
                 <div class="w3-cell-row">
-                    <div class="w3-container w3-cell">
+                    <div class="slidecontainer">
                       <p>Acceleration</p>
-                      <input type="text"   name="acceleration" value="91"
-                      min="10" max="99">
+                      <input type="range" min="1" max="99"  name="acceleration"
+                      value="99" class="slider" step="1" >
                       <p>Sprint Speed</p>
                       <input type="text" name="sprint_speed" value="86"
                       min="10" max="99">
