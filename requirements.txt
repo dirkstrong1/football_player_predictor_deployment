@@ -3,12 +3,12 @@ asn1crypto==1.2.0
 astroid==2.2.5
 attrs==19.3.0
 autopep8==1.4.4
-awscli==1.16.234
+awscli==1.36.17
 backcall==0.1.0
 bleach==3.1.0
 boto==2.49.0
-boto3==1.10.1
-botocore==1.13.1
+boto3==1.36.17
+botocore==1.35.77
 bz2file==0.98
 certifi==2019.9.11
 cffi==1.13.1
@@ -93,4 +93,4 @@ wcwidth==0.1.7
 webencodings==0.5.1
 Werkzeug==0.15.5
 wrapt==1.11.2
-zipp==0.6.0
+zipp==3.21.0
