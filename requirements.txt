@@ -1,14 +1,14 @@
 appnope==0.1.0
 asn1crypto==1.2.0
-astroid==2.2.5
+astroid==3.3.6
 attrs==19.3.0
 autopep8==1.4.4
 awscli==1.35.1
 backcall==0.1.0
 bleach==3.1.0
 boto==2.49.0
-boto3==1.35.77
-botocore==1.35.77
+boto3==1.35.35
+botocore==1.35.35
 bz2file==0.98
 certifi==2019.9.11
 cffi==1.13.1
