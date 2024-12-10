@@ -13,7 +13,7 @@ bz2file==0.98
 certifi==2019.9.11
 cffi==1.17.1
 chardet==3.0.4
-Click==7.0
+Click==8.1.7
 colorama==0.3.9
 cryptography==2.7
 cycler==0.10.0
